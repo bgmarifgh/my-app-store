@@ -13,12 +13,12 @@
   ],
   "apps": [
     {
-      "id": "productivity-pro",
-      "name": "Productivity Pro",
+      "id": "com.bgmarif.bgmnetwork",
+      "name": "bgmNetwork",
       "shortDescription": "All-in-one task manager and focus timer",
       "description": "Boost your productivity with smart task lists, Pomodoro timer, habit tracking, and beautiful analytics. Syncs across devices via optional cloud or local only mode. Completely free and open source.",
-      "developer": "YourName",
-      "category": "Productivity",
+      "developer": "bgmarif",
+      "category": "earning",
       "icon": "https://api.dicebear.com/7.x/shapes/svg?seed=productivity&backgroundColor=0d9488",
       "screenshots": [
         "https://picsum.photos/seed/prod1/400/800",
