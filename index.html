@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Personal App Store powered by GitHub Releases" />
+  <title>My App Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📱</text></svg>" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo" id="logo">
+        <span class="logo-icon">📱</span>
+        <span class="logo-text">My App Store</span>
+      </div>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input type="search" id="searchInput" placeholder="Search apps..." autocomplete="off" />
+        <button class="search-clear" id="searchClear" aria-label="Clear search" hidden>×</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero / Featured -->
+    <section class="hero" id="heroSection">
+      <div class="hero-content">
+        <h1 id="storeTitle">My App Store</h1>
+        <p id="storeTagline">Your personal app store powered by GitHub</p>
+      </div>
+      <div class="featured-carousel" id="featuredCarousel"></div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section">
+      <div class="categories" id="categories"></div>
+    </section>
+
+    <!-- Apps Grid -->
+    <section class="apps-section">
+      <div class="section-header">
+        <h2 id="sectionTitle">All Apps</h2>
+        <span class="app-count" id="appCount"></span>
+      </div>
+      <div class="apps-grid" id="appsGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-icon">🔍</div>
+        <h3>No apps found</h3>
+        <p>Try a different search or category</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- App Detail Modal -->
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal" id="appModal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" hidden></div>
+
+  <footer class="footer">
+    <p>Built for GitHub Pages · Downloads come directly from GitHub Releases</p>
+    <p class="footer-note">Replace sample data in <code>apps.json</code> with your real apps</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
